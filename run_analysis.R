@@ -40,21 +40,29 @@ names(activities)<-c("Code", "activity")
 ### 4.Appropriately labels the data set with descriptive activity names
 
 names(subjects)<-"subject"
-tidyDataSet<-cbind(subjects,activities[2],featureSummary)
+tidyDataSetA<-cbind(subjects,activities[2],featureSummary)
 
 ### 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-ddply(tidyDataSet, .(subject, activity), function(x) colMeans(tidyDataSet[,4:5]))
 
+#Function to calculate mean for each variable
 DoTidyData <- function(dataset) {
   tidy <- ddply(dataset, .(subject, activity), function(x) colMeans(x[,3:68]))
 }
 
-xx<-DoTidyData(tidyDataSet)
+#fucntion to change variables'name texts 
+Renaming<-function(x) {
+  df<-gsub('\\(\\)', '', x)
+  df<-gsub('-', '.\\', df)
+  df<-tolower(gsub('([[:upper:]])', '.\\1', df))
+  df<-gsub('\\.\\.', '.\\', df)
+}
 
-xx<-names(tidyDataSet)
-xx
-xx<-gsub('\\(\\)', '', xx)
-xx<-gsub('-', '.\\', xx)
-xx<-tolower(gsub('([[:upper:]])', '.\\1', xx))
-xx<-gsub('\\.\\.', '.\\', xx)
-xx
+#Running fuction to calculate means for each variable
+tidyDataSetB<-DoTidyData(tidyDataSet)
+
+#Naming variables 
+names(tidyDataSetB)<-Renaming(names(tidyDataSetB))
+
+# Create a file in CSV format with tidy data containing means for each variable 
+# and "good names"
+write.csv(tidyDataSetB,"./rProject/activityAverage.csv", row.names=FALSE)
