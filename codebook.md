@@ -30,15 +30,18 @@ For each record in the dataset it is provided:
 The following are the variables on the tidy data set submitted as final result of the activity
 
 **Contains data** "_activityAverage.txt_"
+
 **Observations:** 180
-**Variables:**68
+
+**Variables:** 68
+
 **Size:** 219 kb
 
 ######List of variables
 
-**subject**    : Identification number
+*subject*    : Identification number
 
-**activity** 	 : Name of activity	  
+*activity* 	 : Name of activity	  
 
 |Activity |Frequency |Percent|
 ---|---|---|
