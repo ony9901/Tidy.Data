@@ -37,13 +37,14 @@ The following are the variables on the tidy data set submitted as final result o
 
 **Size:** 219 kb
 
-**the conventions used to names of the following variables are:**
--_body_:body motion component
--_gravity_: gravitational component
--_acc_: accelerometer sensor signal
--_gyro_:gyroscope sensor signal
--_mean_: mean
--_std_: standard deviation
+**the conventions used to name the variables are:**
+
+- _body_: body motion component
+- _gravity_: gravitational component
+- _acc_: accelerometer sensor signal
+- _gyro_: gyroscope sensor signal
+- _mean_: mean
+- _std_: standard deviation
 
 ######List of variables
 
