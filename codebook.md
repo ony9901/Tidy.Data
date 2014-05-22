@@ -36,12 +36,9 @@ The following are the variables on the tidy data set submitted as final result o
 
 ######List of variables
 
-1. **subject**    : Identification number
-2. **activity** 	 : Name of activity	  
+**subject**    : Identification number
 
-3. sdsd
-4. 
-
+**activity** 	 : Name of activity	  
 
 |Activity |Frequency |Percent|
 ---|---|---|
