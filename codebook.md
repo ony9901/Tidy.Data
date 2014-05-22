@@ -41,7 +41,7 @@ The following are the variables on the tidy data set submitted as final result o
 
 *subject*    : Identification number
 
-*activity* 	 : Name of activity	  
+*activity*    : Name of activity	  
 
 |Activity |Frequency |Percent|
 ---|---|---|
@@ -51,3 +51,9 @@ STANDING                  |30    |16.7
 WALKING                   |30    |16.7
 WALKING_DOWNSTAIRS        |30    |16.7
 WALKING_UPSTAIRS          |30    |16.7
+
+**the conventions used to names of the following variables are:**
+
+   -_body_:body motion component
+   -_gravity_: gravitational component
+   -_acc_:
