@@ -58,11 +58,12 @@ Renaming<-function(x) {
 }
 
 #Running fuction to calculate means for each variable
-tidyDataSetB<-DoTidyData(tidyDataSet)
+tidyDataSetB<-DoTidyData(tidyDataSetA)
 
 #Naming variables 
 names(tidyDataSetB)<-Renaming(names(tidyDataSetB))
 
-# Create a file in CSV format with tidy data containing means for each variable 
-# and "good names"
-write.csv(tidyDataSetB,"./rProject/activityAverage.csv", row.names=FALSE)
+# Create a file into fixed width format with tidy data containing means for each variable 
+# and good names
+write.table(tidyDataSetB,"./rProject/activityAverage.txt", row.names=FALSE)
+ 
